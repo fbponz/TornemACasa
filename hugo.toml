@@ -1,0 +1,17 @@
+[menu]
+  [[menu.main]]
+    name = "Inicio"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Área Damnificada"
+    url = "/area/"
+    weight = 2
+  [[menu.main]]
+    name = "Campañas Realizadas"
+    url = "/campanas/"
+    weight = 3
+  [[menu.main]]
+    name = "Colaboradores"
+    url = "/colaboradores/"
+    weight = 4

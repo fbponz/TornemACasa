@@ -1,0 +1,197 @@
+:root {
+  --color-main: #F37F2D;      /* Naranja principal */
+  --color-secondary: #273B48; /* Azul oscuro */
+  --color-green: #A0B882;    /* Verde adicional */
+  --color-yellow: #ECC35C;   /* Amarillo adicional */
+  --color-blue: #619B8A;     /* Azul verdoso adicional */
+}
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--color-secondary);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Hero Section */
+.hero {
+  background-color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-logo {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+/* Estadísticas */
+.statistics {
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 3rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-main);
+  display: block;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: white;
+}
+
+/* Campañas */
+.campaigns {
+  padding: 4rem 0;
+  background-color: #f5f5f5;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--color-secondary);
+  font-size: 2.5rem;
+}
+
+.campaign-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.campaign-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.campaign-card:hover {
+  transform: translateY(-5px);
+}
+
+.campaign-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.campaign-card h3 {
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.campaign-card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #eee;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--color-main);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.stats-info {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Botones */
+.donate-button {
+  background-color: var(--color-main);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+  background-color: #d86d1b;
+  color: white;
+}
+
+.campaign-link {
+  color: var(--color-main);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.campaign-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+      font-size: 2.5rem;
+  }
+
+  .stats-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .campaign-grid {
+      grid-template-columns: 1fr;
+  }
+}

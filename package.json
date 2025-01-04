@@ -1,0 +1,31 @@
+{
+  "name": "011-tornem_a_casa",
+  "version": "1.0.0",
+  "description": "Proyecto Hugo con Bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "start": "hugo server -D",
+    "build": "hugo --minify",
+    "dev": "hugo server -D --noHTTPCache"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "last 2 versions",
+    "> 1%"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "bootstrap": "^5.3.3",
+    "viewerjs": "^1.11.7"
+  }
+}
