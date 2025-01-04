@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌐 Tornem A Casa
 
 Este proyecto es un sitio web desarrollado con **Hugo** y **Bootstrap**, diseñado específicamente para el cierre de la página oficial:  
@@ -110,3 +111,7 @@ Si tienes dudas o necesitas asistencia, no dudes en contactarnos.
 
 - 📝 Licencia: GNU
 - 📅 Versión: 1.0.0
+=======
+# TornemACasa
+Web estatica de Tornem A Casa
+>>>>>>> c551266b64dbb46f1a51e8c7b752a62f115580ac
