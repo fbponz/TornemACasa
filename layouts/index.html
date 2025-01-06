@@ -4,86 +4,63 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <img src="{{ "images/logo-orange.png" | relURL }}" alt="Tornem a Casa"
-        class="hero-logo">
-        <h1 class="hero-title">Tornem a Casa</h1>
-        <p class="hero-description">
-          Iniciativa para ayudar a los damnificados afectados por la DANA
-        </p>
+        <h1 class="hero-title">{{ .Site.Title }}</h1>
+        <p class="hero-description">{{ .Site.Params.description }}</p>
+        <a href="/donate" class="donate-button">Haz tu Donación</a>
       </div>
     </div>
   </section>
 
-  <!-- Estadísticas de Impacto -->
-  <section class="statistics" style="background-color: var(--color-secondary)">
+  <!-- Info Section -->
+  <section class="info-section">
     <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item">
-          <span class="stat-number">25000€</span>
-          <span class="stat-label">Recaudados</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">150</span>
-          <span class="stat-label">Beneficiarios</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">45</span>
-          <span class="stat-label">Colaboradores</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Resumen de Campañas Realizadas -->
-  <section class="campaigns">
-    <div class="container">
-      <h2 class="section-title">Campañas realizadas</h2>
-      <div class="campaign-grid">
-        <div class="campaign-card">
-          <img src="{{ "images/icons/deshumidificador.svg" | relURL }}"
-          alt="Deshumidificador" class="campaign-icon">
-          <h3>20 Deshumidificadores</h3>
+      <div class="info-grid">
+        <!-- Deshumidificadores -->
+        <div class="info-column">
+          <img src="{{ "/images/icons/deshumificador.png" | relURL }}"
+          alt="Deshumidificador" class="info-icon">
+          <h2>Deshumidificadores</h2>
           <p>
-            Entrega realizada de deshumidificadores para combatir la humedad en
-            las viviendas afectadas.
+            Dispositivos entregados para eliminar la humedad y prevenir la
+            aparición de moho en las viviendas afectadas por la DANA.
           </p>
-          <div class="campaign-stats">
-            <div class="stats-info">
-              <span>5000€ recaudados</span>
-              <span>45 donantes</span>
-            </div>
-          </div>
+          <span class="info-stat">20 unidades entregadas</span>
         </div>
 
-        <div class="campaign-card">
-          <img src="{{ "images/icons/electrodomesticos.svg" | relURL }}"
-          alt="Electrodomésticos" class="campaign-icon">
-          <h3>Electrodomésticos Básicos</h3>
+        <!-- Lavadoras -->
+        <div class="info-column">
+          <img src="{{ "/images/icons/lavadora.png" | relURL }}" alt="Lavadora"
+          class="info-icon">
+          <h2>Lavadoras</h2>
           <p>
-            Distribución de electrodomésticos esenciales a las familias más
-            afectadas.
+            Electrodomésticos esenciales para familias que perdieron sus enseres
+            durante la DANA.
           </p>
-          <div class="campaign-stats">
-            <div class="stats-info">
-              <span>15000€ recaudados</span>
-              <span>85 donantes</span>
-            </div>
-          </div>
+          <span class="info-stat">10 unidades instaladas</span>
         </div>
 
-        <div class="campaign-card">
-          <img src="{{ "images/icons/construccion.svg" | relURL }}"
-          alt="Construcción" class="campaign-icon">
-          <h3>Materiales de Construcción</h3>
+        <!-- Colchones -->
+        <div class="info-column">
+          <img src="{{ "/images/icons/colchon.png" | relURL }}" alt="Colchón"
+          class="info-icon">
+          <h2>Colchones</h2>
           <p>
-            Entrega de materiales para la rehabilitación de viviendas dañadas.
+            Distribución de colchones nuevos para garantizar un descanso digno a
+            los afectados.
           </p>
-          <div class="campaign-stats">
-            <div class="stats-info">
-              <span>20000€ recaudados</span>
-              <span>120 donantes</span>
-            </div>
-          </div>
+          <span class="info-stat">10 unidades entregadas</span>
+        </div>
+
+        <!-- Calefactores -->
+        <div class="info-column">
+          <img src="{{ "/images/icons/radiador.png" | relURL }}"
+          alt="Calefactor" class="info-icon">
+          <h2>Calefactores</h2>
+          <p>
+            Entrega de calefactores para proporcionar confort térmico durante la
+            rehabilitación.
+          </p>
+          <span class="info-stat">20 unidades distribuidas</span>
         </div>
       </div>
     </div>

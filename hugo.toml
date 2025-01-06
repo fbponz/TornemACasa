@@ -1,3 +1,30 @@
+baseURL = "http://localhost"
+title = "Tornem a Casa"
+
+defaultContentLanguage = "es"
+defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.es]
+    languageName = "Español"
+    contentDir = "content/es"
+    weight = 1
+    [languages.es.params]
+      description = "Iniciativa para ayudar a los damnificados afectados por la DANA"
+
+  [languages.ca]
+    languageName = "Valencià"
+    contentDir = "content/ca"
+    weight = 2
+    [languages.ca.params]
+      description = "Iniciativa per ajudar als damnificats afectats per la DANA"
+
+[params]
+  custom_css = ["/css/custom.css"]
+  site_logo = "/images/logos/logo-black.png"
+  favicon = "/images/logos/logo-icon.jpg"
+  description = "Iniciativa solidaria para ayudar a los afectados por la DANA"
+
 [menu]
   [[menu.main]]
     name = "Inicio"
@@ -15,3 +42,8 @@
     name = "Colaboradores"
     url = "/colaboradores/"
     weight = 4
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

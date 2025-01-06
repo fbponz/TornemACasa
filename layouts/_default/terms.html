@@ -2,6 +2,7 @@
 <div class="taxonomy-content">
   <div class="container">
     <h1>{{ .Title }}</h1>
+    <p>{{ .Data.Terms }}</p>
     <ul>
       {{ range .Pages }}
       <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>

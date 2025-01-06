@@ -3,8 +3,13 @@
   <div class="container">
     <h1>{{ .Title }}</h1>
     {{ range .Pages }}
-    <article>
+    <article class="list-article">
       <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <img
+        src="{{ with .Params.image }}{{ . | relURL }}{{ end }}"
+        alt="{{ .Title }}"
+        class="thumbnail"
+      />
       {{ .Summary }}
     </article>
     {{ end }}

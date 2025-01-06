@@ -3,22 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:description" content="{{ .Site.Params.description }}" />
+    <meta property="og:image" content="{{ "/images/logos/logo-black.png" |
+    relURL }}" />
     <title>
       {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title
       }}{{ end }}
     </title>
-    {{ range .Site.Params.custom_css }}
-    <link rel="stylesheet" href="{{ . | relURL }}" />
-    {{ end }}
+    <link rel="stylesheet" href="{{ "/css/custom.css" | relURL }}" />
   </head>
   <body>
     <header>
       <nav class="main-nav">
         <div class="container">
-          <a href="/" class="logo">{{ .Site.Title }}</a>
+          <a href="/" class="site-logo">
+            <img src="{{ "/images/logos/logo-black.png" | relURL }}" alt="{{
+            .Site.Title }}" />
+          </a>
           <ul class="nav-links">
             {{ range .Site.Menus.main }}
-            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            <li><a href="{{ .URL }}" class="nav-link">{{ .Name }}</a></li>
             {{ end }}
           </ul>
         </div>
@@ -27,7 +32,13 @@
     <main>{{ block "main" . }}{{ end }}</main>
     <footer>
       <div class="container">
-        <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</p>
+        <div class="footer-content">
+          <img src="{{ "/images/logos/logo-white.png" | relURL }}" alt="{{
+          .Site.Title }}" class="footer-logo" />
+          <p class="copyright">
+            &copy; {{ now.Format "2025" }} {{ .Site.Title }}
+          </p>
+        </div>
       </div>
     </footer>
   </body>

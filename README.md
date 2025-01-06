@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🌐 Tornem A Casa
 
 Este proyecto es un sitio web desarrollado con **Hugo** y **Bootstrap**, diseñado específicamente para el cierre de la página oficial:  
@@ -25,12 +24,10 @@ TornemACasa/
 ├── data/               # 📊 Archivos de datos para personalización
 ├── i18n/               # 🌍 Archivos de internacionalización
 ├── layouts/            # 🖼️ Plantillas personalizadas de páginas
-├── node_modules/       # 📦 Dependencias instaladas por npm
 ├── public/             # 🌐 Archivos generados para producción
 ├── resources/          # ⚙️ Recursos procesados por Hugo
 ├── static/             # 🖼️ Archivos estáticos como imágenes
 ├── themes/             # 🎨 Temas para el proyecto
-├── .env                # 🔒 Variables de entorno
 ├── .gitmodules         # ⚙️ Configuración de submódulos git
 ├── .hugo_build.lock    # 🔒 Archivo de bloqueo generado por Hugo
 ├── hugo.exe            # ⚙️ Binario de Hugo
@@ -73,45 +70,24 @@ TornemACasa/
 
 Sigue los pasos a continuación para configurar el proyecto en tu máquina local:
 
-1️⃣ Clonar el repositorio
-git clone https://github.com/fbponz/TornemACasa.git
+1️⃣ Clonar el repositorio  
+git clone https://github.com/fbponz/TornemACasa.git  
 cd TornemACasa
 
-2️⃣ Instalar las dependencias
+2️⃣ Instalar las dependencias  
 npm install
 
-3️⃣ Iniciar el servidor de desarrollo
+3️⃣ Iniciar el servidor de desarrollo  
 npm run start
-
-## 📦 Archivos Descargados
-
-Se han incorporado los siguientes recursos al proyecto:
-
-1. Hugo (versión 0.140.2):
-
-- Archivos: hugo_0.140.2_windows-amd64 y hugo_extended_0.140.2_windows-amd64
-  Descargado de la página oficial de Hugo: 🔗 https://gohugo.io/.
-
-2. Tema Bootstrap para Hugo:
-
-- Archivo: hugo-theme-bootstrap-master
-- Descargado desde el repositorio oficial del tema: 🔗 https://github.com/.
 
 ## 🌟 Publicación
 
-Para generar y publicar el sitio web en producción, ejecuta: npm run build
-Los archivos generados estarán disponibles en el directorio public/, listos para ser subidos al servidor.
+Para generar y publicar el sitio web en producción, ejecuta: `npm run build`  
+Los archivos generados estarán disponibles en el directorio `public/`, listos para ser subidos al servidor.
 
 ## ℹ️ Información Adicional
 
-Este proyecto tiene como objetivo cerrar la página oficial:
+Este proyecto tiene como objetivo cerrar la página oficial:  
 🔗 https://tornemacasa.es/
 
 Si tienes dudas o necesitas asistencia, no dudes en contactarnos.
-
-- 📝 Licencia: GNU
-- 📅 Versión: 1.0.0
-=======
-# TornemACasa
-Web estatica de Tornem A Casa
->>>>>>> c551266b64dbb46f1a51e8c7b752a62f115580ac
