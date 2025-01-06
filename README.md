@@ -1,6 +1,6 @@
 # 🌐 Tornem A Casa
 
-Este proyecto es un sitio web desarrollado con **Hugo** y **Bootstrap**, diseñado específicamente para el cierre de la página oficial:  
+Este proyecto es un sitio web desarrollado con **Hugo** \*, diseñado específicamente para el cierre de la página oficial:  
 [🔗 https://tornemacasa.es/](https://tornemacasa.es/)
 
 ---
@@ -20,17 +20,15 @@ La estructura principal del proyecto es la siguiente:
 TornemACasa/
 ├── archetypes/         # 📝 Plantillas base para nuevos contenidos
 ├── assets/             # 🎨 Recursos personalizados como CSS y JavaScript
-├── content/            # ✍️ Contenido del sitio web
-├── data/               # 📊 Archivos de datos para personalización
+├── content/            # ✍️ Contenido del sitio web, organizado por secciones
+├── data/               # 📊 Archivos de datos dinámicos (JSON)
 ├── i18n/               # 🌍 Archivos de internacionalización
 ├── layouts/            # 🖼️ Plantillas personalizadas de páginas
-├── public/             # 🌐 Archivos generados para producción
+├── public/             # 🌐 Archivos generados para producción (NO MODIFICAR)
 ├── resources/          # ⚙️ Recursos procesados por Hugo
 ├── static/             # 🖼️ Archivos estáticos como imágenes
 ├── themes/             # 🎨 Temas para el proyecto
 ├── .gitmodules         # ⚙️ Configuración de submódulos git
-├── .hugo_build.lock    # 🔒 Archivo de bloqueo generado por Hugo
-├── hugo.exe            # ⚙️ Binario de Hugo
 ├── hugo.toml           # ⚙️ Archivo de configuración de Hugo
 ├── package-lock.json   # 🔒 Archivo de bloqueo de dependencias npm
 ├── package.json        # 🗂️ Configuración de scripts y dependencias npm
@@ -38,32 +36,17 @@ TornemACasa/
 
 ```
 
-## ⚙️ Dependencias y Scripts
+## ⚙️ Scripts
 
-### 🔗 Dependencias principales:
+Desde **PowerShell**, los comandos se ajustan al entorno, se detallan los scripts disponibles:
 
-- @fortawesome/fontawesome-svg-core: ^6.7.2
-- @fortawesome/free-brands-svg-icons: ^6.7.2
-- @fortawesome/free-regular-svg-icons: ^6.7.2
-- @fortawesome/free-solid-svg-icons: ^6.7.2
-- bootstrap: ^5.3.3
-- viewerjs: ^1.11.7
-
-### 🛠️ Dependencias de desarrollo:
-
-- autoprefixer: ^10.4.20
-- postcss: ^8.4.49
-- postcss-cli: ^11.0.0
-
-### 🚀 Scripts disponibles:
-
-- start: **hugo server -D**
+- start: **.\hugo server -D**
   Inicia un servidor local para desarrollo, incluyendo contenido en borrador.
 
-- build: **hugo --minify**
+- build: **.\hugo --minify**
   Genera el sitio optimizado para producción.
 
-- dev: **hugo server -D --noHTTPCache**
+- dev: **.\hugo server -D --noHTTPCache**
   Inicia un servidor local con la caché deshabilitada.
 
 ## 🛠️ Instalación y Configuración
@@ -74,16 +57,42 @@ Sigue los pasos a continuación para configurar el proyecto en tu máquina local
 git clone https://github.com/fbponz/TornemACasa.git  
 cd TornemACasa
 
-2️⃣ Instalar las dependencias  
-npm install
+2️⃣ Iniciar el servidor de desarrollo  
+Desde PowerShell, ejecuta: .\hugo server -D
 
-3️⃣ Iniciar el servidor de desarrollo  
-npm run start
+Esto iniciará un servidor local en http://localhost:1313 para previsualizar el sitio, incluyendo contenido en borrador.
+
+## 📊 Uso de Datos Dinámicos
+
+El proyecto utiliza la carpeta data/ para almacenar información dinámica que puede ser utilizada en las plantillas de Hugo. Esto permite centralizar datos y personalizar contenido de forma eficiente.
+
+## 🗂️ Estructura de la Carpeta data/
+
+La carpeta data/ contiene archivos en formato JSON que se pueden usar directamente en las plantillas.
+
+```plaintext
+data/
+├── campaigns.json       # Detalles de las campañas activas
+├── collaborators.json   # Lista de colaboradores
+├── statistics.json      # Estadísticas generales
+
+```
+
+## 📖 Cómo Usarlos en las Plantillas
+
+1️⃣ Accediendo a los datos
+Para acceder a un archivo en la carpeta data/, utiliza la variable .Site.Data en tus plantillas.
+
+2️⃣ Integración con Single Pages
+Si estás trabajando con single.html, puedes combinar los datos dinámicos con los contenidos específicos de una página.
+
+3️⃣ Actualizar los Datos
+Simplemente edita los archivos .json en la carpeta data/. Los cambios se reflejarán automáticamente cuando reinicies el servidor con .\hugo server -D.
 
 ## 🌟 Publicación
 
-Para generar y publicar el sitio web en producción, ejecuta: `npm run build`  
-Los archivos generados estarán disponibles en el directorio `public/`, listos para ser subidos al servidor.
+Para generar y publicar el sitio web en producción, ejecuta: .\hugo --minify
+Los archivos optimizados estarán disponibles en el directorio public/, listos para ser subidos al servidor.
 
 ## ℹ️ Información Adicional
 
