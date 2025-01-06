@@ -22,9 +22,14 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     color: var(--color-secondary);
     line-height: 1.6;
-    background-color: #f9f9f9; /* Fondo por defecto */
+    background: url('/images/logos/logo-white.png') repeat; /* Fondo con logotipos repetidos */
+    background-size: 50px 50px; /* Tamaño del logotipo */
+    background-color: #f3f1f1;
   }
   
+  /* ===============================
+     CONTENEDOR GENERAL
+     =============================== */
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -32,181 +37,92 @@
   }
   
   /* ===============================
-     HERO SECTION
+     HEADER Y NAVEGACIÓN
      =============================== */
-  .hero {
-    background-color: #F37F2D;
-    padding: 4rem 0;
-    text-align: center;
-  }
-  
-  .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .hero-logo {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 2rem;
-  }
-  
-  .hero-title {
-    font-size: 3rem;
-    color: var(--color-secondary);
-    margin-bottom: 1rem;
-  }
-  
-  .hero-description {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: #666;
-  }
-  
-  header {
-    background-color: var(--color-main); /* Naranja principal */
-    padding: 1rem 0; /* Espaciado alrededor del contenido */
-  }
-  
-  header .site-logo img {
-    max-height: 50px; /* Ajusta el tamaño del logo para que encaje bien */
-  }
-  
-  /* ===============================
-     ESTADÍSTICAS
-     =============================== */
-  .statistics {
-    background-color: var(--color-secondary);
-    color: white;
-    padding: 3rem 0;
-  }
-  
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    text-align: center;
-  }
-  
-  .stat-number {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--color-main);
-  }
-  
-  .stat-label {
-    font-size: 1.1rem;
-  }
-  
-  /* ===============================
-     CAMPAÑAS
-     =============================== */
-  .campaigns {
-    padding: 4rem 0;
-    background-color: #f5f5f5;
-  }
-  
-  .section-title {
-    text-align: center;
-    margin-bottom: 3rem;
-    color: var(--color-secondary);
-    font-size: 2.5rem;
-  }
-  
-  .campaign-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-  
-  .campaign-card {
-    background: white;
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .campaign-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .campaign-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1rem;
-  }
-  
-  .campaign-card h3 {
-    color: var(--color-secondary);
-    margin-bottom: 1rem;
-  }
-  
-  .campaign-card p {
-    color: #666;
-    margin-bottom: 1.5rem;
-  }
-  
-  .progress-bar {
-    width: 100%;
-    height: 8px;
-    background-color: #eee;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-  }
-  
-  .progress {
-    height: 100%;
+  .hero-section {
     background-color: var(--color-main);
-    border-radius: 4px;
-    transition: width 0.3s ease;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
   }
   
-  .stats-info {
+  .header-content {
     display: flex;
-    justify-content: space-between;
-    color: #666;
-    font-size: 0.9rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
   
-  /* ===============================
-     BOTONES
-     =============================== */
-  .donate-button {
-    background-color: var(--color-main);
+  .header-logo {
+    max-height: 120px;
+    width: auto;
+  }
+  
+  .nav-links ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
     color: white;
-    padding: 1rem 2rem;
-    border-radius: 4px;
     text-decoration: none;
-    text-transform: uppercase;
     font-weight: bold;
-    transition: background-color 0.3s ease;
   }
   
-  .donate-button:hover {
-    background-color: #d86d1b;
-  }
-  
-  .campaign-link {
-    color: var(--color-main);
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .campaign-link:hover {
+  .nav-links a:hover {
     text-decoration: underline;
   }
   
   /* ===============================
-     RESPONSIVE
+     SECCIÓN PRINCIPAL
      =============================== */
-  @media (max-width: 768px) {
-    .hero-title {
-      font-size: 2.5rem;
-    }
+  .title-section {
+    text-align: center;
+    padding: 4rem 1rem;
+  }
   
-    .stats-grid, .campaign-grid {
-      grid-template-columns: 1fr;
-    }
+  .title-section h1 {
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+  }
+  
+  .title-section p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  /* ===============================
+     LOGOTIPOS
+     =============================== */
+  .logos-section {
+    padding: 3rem 1rem;
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  
+  .logos img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 1rem;
+    display: inline-block;
+  }
+  
+  /* ===============================
+     FOOTER
+     =============================== */
+  footer {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  footer .footer-logo {
+    max-height: 40px;
+    margin-bottom: 10px;
   }
   

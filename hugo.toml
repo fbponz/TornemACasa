@@ -1,8 +1,9 @@
-baseURL = "http://localhost"
+baseURL = "http://localhost:1313/"
 title = "Tornem a Casa"
 
 defaultContentLanguage = "es"
 defaultContentLanguageInSubdir = true
+canonifyURLs = true
 
 [languages]
   [languages.es]
@@ -32,16 +33,20 @@ defaultContentLanguageInSubdir = true
     weight = 1
   [[menu.main]]
     name = "Área Damnificada"
-    url = "/area/"
+    url = "/area-damnificada/"
     weight = 2
   [[menu.main]]
     name = "Campañas Realizadas"
-    url = "/campanas/"
+    url = "/campanas-realizadas/"
     weight = 3
   [[menu.main]]
     name = "Colaboradores"
     url = "/colaboradores/"
     weight = 4
+  [[menu.main]]
+    name = "Donde Continuar"
+    url = "/links/"
+    weight = 5
 
 [markup]
   [markup.goldmark]

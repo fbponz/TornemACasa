@@ -8,37 +8,49 @@
     <meta property="og:image" content="{{ "/images/logos/logo-black.png" |
     relURL }}" />
     <title>
-      {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title
-      }}{{ end }}
+      {{ if .IsHome }} {{ .Site.Title }} {{ else }} {{ .Title }} | {{
+      .Site.Title }} {{ end }}
     </title>
-    <link rel="stylesheet" href="{{ "/css/custom.css" | relURL }}" />
+    {{ $styles := resources.Get "custom.css" | css.Sass | resources.Minify }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
   </head>
   <body>
-    <header>
-      <nav class="main-nav">
-        <div class="container">
-          <a href="/" class="site-logo">
-            <img src="{{ "/images/logos/logo-black.png" | relURL }}" alt="{{
-            .Site.Title }}" />
-          </a>
-          <ul class="nav-links">
-            {{ range .Site.Menus.main }}
-            <li><a href="{{ .URL }}" class="nav-link">{{ .Name }}</a></li>
-            {{ end }}
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main>{{ block "main" . }}{{ end }}</main>
-    <footer>
+    <header class="hero-section">
       <div class="container">
-        <div class="footer-content">
-          <img src="{{ "/images/logos/logo-white.png" | relURL }}" alt="{{
-          .Site.Title }}" class="footer-logo" />
-          <p class="copyright">
-            &copy; {{ now.Format "2025" }} {{ .Site.Title }}
-          </p>
+        <div class="header-content">
+          <img src="{{ "/images/logos/logo-black.png" | relURL }}" alt="Tornem a
+          Casa" class="header-logo">
+          <nav class="nav-links">
+            <ul>
+              <li><a href="/" class="tab-link">Inicio</a></li>
+              <li>
+                <a href="/area-damnificada/" class="tab-link"
+                  >Área Damnificada</a
+                >
+              </li>
+              <li>
+                <a href="/campanas-realizadas/" class="tab-link"
+                  >Campañas Realizadas</a
+                >
+              </li>
+              <li>
+                <a href="/colaboradores/" class="tab-link">Colaboradores</a>
+              </li>
+              <li>
+                <a href="/links/" class="tab-link">Donde Continuar</a>
+              </li>
+            </ul>
+          </nav>
         </div>
+      </div>
+    </header>
+
+    <main>{{ block "main" . }} {{ end }}</main>
+    <footer>
+      <div class="container footer-content">
+        <img src="{{ "/images/logos/logo-white.png" | relURL }}" alt="{{
+        .Site.Title }}" class="footer-logo" />
+        <p>&copy; 2025 Tornem a Casa. Todos los derechos reservados.</p>
       </div>
     </footer>
   </body>

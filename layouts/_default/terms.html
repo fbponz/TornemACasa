@@ -1,13 +1,7 @@
 {{ define "main" }}
-<div class="taxonomy-content">
-  <div class="container">
-    <h1>{{ .Title }}</h1>
-    <p>{{ .Data.Terms }}</p>
-    <ul>
-      {{ range .Pages }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-      {{ end }}
-    </ul>
-  </div>
+<div class="terms-content">
+  <h1>{{ .Title }}</h1>
+  <p>{{ .Params.description }}</p>
+  <div class="content-body">{{ .Content }}</div>
 </div>
 {{ end }}

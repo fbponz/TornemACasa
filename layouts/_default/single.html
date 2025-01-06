@@ -1,15 +1,78 @@
 {{ define "main" }}
-<article class="page-content">
-  <div class="container">
+<div class="single-content">
+  <article>
     <h1>{{ .Title }}</h1>
-    {{ .Content }}
-    <nav class="pagination">
-      {{ with .PrevInSection }}
-      <a href="{{ .Permalink }}" class="prev">Anterior: {{ .Title }}</a>
-      {{ end }} {{ with .NextInSection }}
-      <a href="{{ .Permalink }}" class="next">Siguiente: {{ .Title }}</a>
+    <p>{{ .Params.description }}</p>
+    <div class="content-body">{{ .Content }}</div>
+  </article>
+
+  <!-- Campañas dinámicas -->
+  {{ if eq .Title "Campañas Realizadas" }}
+  <section class="campaigns-section">
+    <h2>Campañas Activas</h2>
+    <div class="campaigns-list">
+      {{ range .Site.Data.campaigns.active_campaigns }}
+      <div class="campaign">
+        <h3>{{ .title }}</h3>
+        <img
+          src="{{ .icon | relURL }}"
+          alt="{{ .title }}"
+          class="campaign-icon"
+        />
+        <p>{{ .description }}</p>
+        <p><strong>Meta:</strong> {{ .goal }} €</p>
+        <p><strong>Recaudado:</strong> {{ .current }} €</p>
+        <p><strong>Donantes:</strong> {{ .donors }}</p>
+        <p><strong>Fecha límite:</strong> {{ .end_date }}</p>
+      </div>
       {{ end }}
-    </nav>
-  </div>
-</article>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Colaboradores dinámicos -->
+  {{ if eq .Title "Colaboradores" }}
+  <section class="collaborators-section">
+    <h2>Colaboradores</h2>
+    <div class="collaborators-list">
+      {{ range .Site.Data.collaborators.companies }}
+      <div class="collaborator">
+        <img
+          src="{{ .logo | relURL }}"
+          alt="{{ .name }}"
+          class="collaborator-logo"
+        />
+        <h3>{{ .name }}</h3>
+        <p>{{ .contribution }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Estadísticas dinámicas -->
+  {{ if eq .Title "Estadísticas" }}
+  <section class="statistics-section">
+    <h2>Estadísticas Generales</h2>
+    <ul>
+      <li>
+        <strong>Total Donado:</strong> {{ .Site.Data.statistics.total_donated }}
+        €
+      </li>
+      <li>
+        <strong>Campañas Activas:</strong> {{
+        .Site.Data.statistics.active_campaigns }}
+      </li>
+      <li>
+        <strong>Beneficiarios:</strong> {{ .Site.Data.statistics.beneficiaries
+        }}
+      </li>
+      <li>
+        <strong>Colaboradores:</strong> {{ .Site.Data.statistics.collaborators
+        }}
+      </li>
+    </ul>
+  </section>
+  {{ end }}
+</div>
 {{ end }}
