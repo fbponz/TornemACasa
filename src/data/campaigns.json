@@ -1,0 +1,40 @@
+{
+    "active_campaigns": [
+        {
+            "id": "deshumidificadores",
+            "title": "20 Deshumidificadores",
+            "description": "Tras la inundación, muchas viviendas aún permanecen húmedas, afectan al agua subterránea durante el paso de la DANA. Esta humedad, además de afectar a las estructuras y provocar problemas de salud y alergias, es necesario secarla cuanto antes para evitar la humedad permanente que genera mohos.",
+            "goal": 5000,
+            "current": 3500,
+            "donors": 45,
+            "end_date": "2025-02-01",
+            "icon": "/images/icons/deshumidificador.svg",
+            "status": "active",
+            "priority": 1
+        },
+        {
+            "id": "electrodomesticos",
+            "title": "Electrodomésticos Básicos",
+            "description": "Muchas familias han perdido sus electrodomésticos básicos debido a las inundaciones. Necesitamos ayuda para proporcionar neveras, lavadoras y cocinas.",
+            "goal": 15000,
+            "current": 7500,
+            "donors": 85,
+            "end_date": "2025-02-15",
+            "icon": "/images/icons/electrodomesticos.svg",
+            "status": "active",
+            "priority": 2
+        },
+        {
+            "id": "materiales-construccion",
+            "title": "Materiales de Construcción",
+            "description": "Se necesitan materiales de construcción para reparar viviendas dañadas por la DANA: cemento, yeso, pinturas, etc.",
+            "goal": 20000,
+            "current": 12000,
+            "donors": 120,
+            "end_date": "2025-03-01",
+            "icon": "/images/icons/construccion.svg",
+            "status": "active",
+            "priority": 3
+        }
+    ]
+}
