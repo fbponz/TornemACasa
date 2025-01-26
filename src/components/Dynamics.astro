@@ -1,0 +1,52 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    donations: string;
+    legal: string;
+    damnified: string;
+    goods: string;
+    deliveries: string;
+}
+
+const { title, description, donations, legal, damnified, goods, deliveries } = Astro.props;
+---
+<div class="w-full p-8 rounded-lg overflow-hidden bg-gray-200 border border-gray-300 shadow-lg">
+    <div class="mx-auto max-w-4xl lg:text-center">
+        <div class="mx-auto max-w-4xl lg:text-center">
+            <h1 class="text-4xl font-bold text-orange-500">{title}</h1>
+        </div>
+        <p class="mt-6 text-lg/8 text-gray-600">{description}</p>
+        <dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
+            <div class="relative pl-9">
+                <dt class="inline font-semibold text-gray-900">
+                Gestión de donaciones
+                </dt>
+                <dd class="inline">{donations}</dd>
+            </div>
+            <div class="relative pl-9">
+                <dt class="inline font-semibold text-gray-900">
+                Gestión de la parte legal y tributarias
+                </dt>
+                <dd class="inline">{legal}</dd>
+            </div>
+            <div class="relative pl-9">
+                <dt class="inline font-semibold text-gray-900">
+                Gestión de Damnificados
+                </dt>
+                <dd class="inline">{damnified}</dd>
+            </div>
+            <div class="relative pl-9">
+                <dt class="inline font-semibold text-gray-900">
+                Gestión de Compras
+                </dt>
+                <dd class="inline">{goods}</dd>
+            </div>
+            <div class="relative pl-9">
+                <dt class="inline font-semibold text-gray-900">
+                Gestión de Entregas
+                </dt>
+                <dd class="inline">{deliveries}</dd>
+            </div>
+        </dl>
+</div></div>
