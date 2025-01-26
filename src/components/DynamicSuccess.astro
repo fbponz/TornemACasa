@@ -1,0 +1,23 @@
+---
+import SuccessUI from './Success.astro'
+import DynamicUI from './Dynamics.astro'
+---
+<div class="flex flex-wrap sd:flex-wrap md:flex-wrap lg:flex-nowrap gap-4 w-full p-8 rounded-lg bg-gray-100 border border-gray-300 shadow-lg">
+    <div>
+    <!-- Dinámica de Trabajo -->
+    <DynamicUI 
+        title="Dinámica de Trabajo" 
+        description="Nuestra dinámica de trabajo ha estado partida en la gestión de los siguientes puntos: Donaciones, Parte legal y tributaria, Damnificados, Compras y Entregas." 
+        donations="Las donaciones las recibíamos a través de la plataforma de crowdfunding seguro (Paypal o Stripe), o en caso de donaciones de alto importe mediante transferencia bancaria. Todas las donaciones tenían como destinatario la cuenta corriente de la fundación Iginio Giordanni. ¿Por qué permitimos que se pudieran hacer donaciones mediante transferencia directa? Para aumentar la eficiencia de la donación evitando el pago de la comisión de la plataforma de pagos con tarjeta. Hemos recibido donaciones por transferencia de CronoChip, Fum de Llum y de la Urbanización La Torre de Porta Coeli." 
+        legal="Los contratos legales de la entrega de los ítems a los damnificados han sido realizados íntegramente por Tornem a Casa, mientras que la parte de certificados de donación y la gestión de la parte tributaria ha sido gestionada por la fundación Iginio Giordanni." 
+        damnified="La gestión de los datos de los damnificados ha sido gestionada íntegramente por Tornem a Casa." 
+        goods="La gestión de compras ha sido también gestionada por Tornem a Casa, la búsqueda de proveedores, la obtención de los presupuestos y facturas proforma. La fundación Iginio Giordanni ha sido la encargada de realizar la transferencia de los fondos a los proveedores." 
+        deliveries="Las entregas se han realizado de forma presencial, en la dirección de los damnificados. Por parte de Tornem a Casa, hemos sido los encargados de entregar colchones y radiadores, mientras que nuestro proveedor Pascual Martí se ha encargado de la entrega de los más pesados, como son las lavadoras."
+        class="mb-8 bg-gray-50 p-6 rounded-lg shadow-md"
+    />
+    </div>
+    <div>
+    <!-- Logros -->
+    <SuccessUI title="Logros" class="mb-8" />
+    </div>
+</div>
