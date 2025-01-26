@@ -1,41 +1,55 @@
 ---
 const {title} = Astro.props;
 ---
-<div class="w-full p-8 rounded-lg overflow-hidden bg-gray-200 border border-gray-300 shadow-lg">
-    <div class="mx-auto max-w-4xl lg:text-center">
-        <h1 class="text-4xl font-bold text-orange-500">{title}</h1>
+<div class="w-full p-8 rounded-lg bg-white border border-gray-200 shadow-lg">
+    <div class="mx-auto max-w-4xl text-center">
+        <h1 class="text-4xl font-bold text-orange-600">{title}</h1>
     </div>
-    <dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
-    <div class="relative pl-9">
-        <dt class="inline font-semibold text-gray-900">
-        Sinergias con Empresas/Empresarios:
-        </dt>
-        <dd class="inline">Las Empresas han sido una parte fundamental, todos los que nos han acompañado durante este tiempo han puesto su granito de arena. Ya sea con donaciones o con descuentos en los productos adquiridos.</dd>
-    </div>
-    <div class="relative pl-9">
-        <dt class="inline font-semibold text-gray-900">
-        Integración de la fundación Iginio Giordani:
-        </dt>
-        <dd class="inline">Hemos conseguido llegar a un acuerdo para que ellos participen en Tornem A Casa, gestionando la parte monetaria, tributaria y pagos.</dd>
-    </div>
-    
-    <div class="relative pl-9">
-        <dt class="inline font-semibold text-gray-900">
-        Donantes:
-        </dt>
-        <dd class="inline">Hemos recibido donaciones de XX, de las XX personas diferentes, con un Total XXXX€.</dd>
-    </div>
-    <div class="relative pl-9">
-        <dt class="inline font-semibold text-gray-900">
-        Hemos Entregado X Productos:
-        </dt>
-        <dd class="inline">Hemos adquirido y entregado 4x productos entre los cuales, son 10 Colchones, 20 Estufas, 10 Lavadoras y X Deshumificadores</dd>
-    </div>
-    <div class="relative pl-9">
-        <dt class="inline font-semibold text-gray-900">
-        Relacion con los Afectados:
-        </dt>
-        <dd class="inline">Hemos gesitonado de forma efectiva, a todos los afectados donde la escucha activa y empatia ha sido los valores a seguir.</dd>
-    </div>
-</dl>
+    <dl class="mt-10 max-w-3xl mx-auto space-y-8 text-gray-700">
+        <div class="relative pl-10">
+            <dt class="flex items-start font-semibold text-gray-900">
+                <span class="w-6 h-6 mr-3 flex items-center justify-center bg-orange-500 text-white rounded-full font-bold">1</span>
+                Sinergias con Empresas/Empresarios:
+            </dt>
+            <dd class="mt-1 ml-9 text-sm">
+                Las empresas han sido una parte fundamental. Todos los que nos han acompañado durante este tiempo han puesto su granito de arena, ya sea con donaciones o descuentos en los productos adquiridos.
+            </dd>
+        </div>
+        <div class="relative pl-10">
+            <dt class="flex items-start font-semibold text-gray-900">
+                <span class="w-6 h-6 mr-3 flex items-center justify-center bg-orange-500 text-white rounded-full font-bold">2</span>
+                Integración de la fundación Iginio Giordani:
+            </dt>
+            <dd class="mt-1 ml-9 text-sm">
+                Hemos conseguido llegar a un acuerdo para que ellos participen en Tornem A Casa, gestionando la parte monetaria, tributaria y los pagos. Era muy importante para poder darle una imagen normalizada a efectos legales. 
+            </dd>
+        </div>
+        <div class="relative pl-10">
+            <dt class="flex items-start font-semibold text-gray-900">
+                <span class="w-6 h-6 mr-3 flex items-center justify-center bg-orange-500 text-white rounded-full font-bold">3</span>
+                Donantes:
+            </dt>
+            <dd class="mt-1 ml-9 text-sm">
+                Hemos recibido donaciones de mas de 5000 €, de mas de 45 personas diferentes.
+            </dd>
+        </div>
+        <div class="relative pl-10">
+            <dt class="flex items-start font-semibold text-gray-900">
+                <span class="w-6 h-6 mr-3 flex items-center justify-center bg-orange-500 text-white rounded-full font-bold">4</span>
+                Hemos Entregado X Productos:
+            </dt>
+            <dd class="mt-1 ml-9 text-sm">
+                Hemos adquirido y entregado mas de 40 productos, entre los cuales se incluyen 10 colchones, 20 estufas, 10 lavadoras y 6 deshumidificadores.
+            </dd>
+        </div>
+        <div class="relative pl-10">
+            <dt class="flex items-start font-semibold text-gray-900">
+                <span class="w-6 h-6 mr-3 flex items-center justify-center bg-orange-500 text-white rounded-full font-bold">5</span>
+                Relación con los Afectados:
+            </dt>
+            <dd class="mt-1 ml-9 text-sm">
+                Hemos gestionado de forma efectiva a todos los afectados, donde la escucha activa y la empatía han sido los valores clave a seguir. Lo mas imporante ha sido poder escuchar a los afectados.
+            </dd>
+        </div>
+    </dl>
 </div>

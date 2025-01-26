@@ -7,31 +7,54 @@ import SuccessUI from './Success.astro'
 import DynamicUI from './Dynamics.astro'
 ---
 
-<div id="container">
+<div id="container" class="bg-white text-gray-800">
 	<main>
 		<section id="hero">
-			<section id="hero" class="flex flex-col gap-4 mx-8 my-4">
+			<section class="flex flex-col gap-6 mx-8 my-8">
+				<!-- Mensaje de Cierre -->
+					<div class="mb-8 bg-yellow-100 border-l-8 border-yellow-500 p-8 rounded-lg shadow-lg text-gray-900">
+						<h1 class="text-6xl font-bold text-yellow-600 mb-4 text-center">
+							Mensaje Cierre
+						</h1>
+					<p class="text-lg leading-relaxed text-center">
+						Tornem a Casa ha decidido cesar sus actividades. Queremos agradecer a todos los que nos han apoyado, 
+						por ellos y la transparencia que siempre hemos querido ofreceros, aquí está la información de las diferentes 
+						campañas y las empresas que han colaborado.
+					</p>
+				</div>
+
+				<!-- Historia -->
+				<div class="bg-white p-8 rounded-lg shadow-md text-gray-800">
 				<SectionUI 
-					title="Mensaje Cierre" 
-					text="Tornem a Casa, ha decidido cesar sus actividades. Queremos agradecer a todos los que nos han apoyado, por ellos y la transparencia que siempre hemos querido ofreceros, aquí está la información de las diferentes campañas y las empresas que han colaborado." 
-					class="mb-4 bg-yellow-200 border-l-4 border-yellow-600 p-4 rounded-lg shadow-lg text-gray-800"
-				/>
-				<SectionUI title="Historia" text="Tornem a Casa nació de un evento Hackathon organizado por GuruWalk, donde el objetivo: Era unir mentes creativas y solidarias para desarrollar soluciones tecnológicas que pudieran ayudar a los afectados por la DANA. En aquel evento, nos reunimos un grupo diverso de 40 personas llenas de ideas y compromiso. Con el tiempo, este equipo se fue transformando, y finalmente 6 decidimos tomar la misión de ayudar al mayor número de personas posible, trabajando con los recursos que teníamos a nuestro alcance. Tras mucho esfuerzo, logramos dar vida a este Crowdfunding que ha sido mucho más que una plataforma: ha sido un faro de esperanza. Gracias a esta iniciativa, hemos conseguido ayudar a más de 30 personas a recuperar lo esencial y reconstruir sus hogares. Hoy, nuestra historia continúa siendo un testimonio de lo que se puede lograr cuando hay una causa común. ¡Gracias por ser parte de este camino!" class="mb-4" />
-				<ObjectiveUI title="Objetivos"/>
+					title="Nuestra Historia" 
+					text="Tornem a Casa nació de un evento organizado por GuruWalk. Se hizo una llamada publica cuyo objetivo era unir mentes creativas y solidarias para desarrollar soluciones tecnológicas que pudieran ayudar a los afectados por la DANA. En aquel evento. Nos reunimos un grupo diverso de 40 personas llenas de ideas y compromiso. Con el tiempo, este equipo se transformó y, finalmente, quedamos 6 que decidimos tomar la misión de ayudar al mayor número de personas posible, trabajando con los recursos que teníamos a nuestro alcance. Tras mucho esfuerzo, logramos dar vida a este Crowdfunding que ha sido mucho más que una plataforma. Gracias a esta iniciativa, hemos conseguido ayudar a recuperar lo esencial y reconstruir sus hogares. Hoy, nuestra historia continúa siendo un testimonio de lo que se puede lograr cuando hay una causa común. ¡Gracias por ser parte de este camino!"
+				>
+				</SectionUI>
+
+				<!-- Objetivos -->
+				<ObjectiveUI title="Objetivos" />
+
+				<!-- Dinámica de Trabajo -->
 				<DynamicUI 
-					title='Dinamica de trabajo' 
-					description='Nuestra dinamica de trabajo ha estado partido en la gestión de los siguientes puntos: Donaciones, Parte legal y tributaria, Damnificados, Compras y Entregas.' 
-					donations='Las donaciones las recibiamos a través de la plataforma de crowdfunding, o en caso de donaciones de alto importe mediante transferencia bancaria. Todas las donaciones tenian como destinatario la cuenta corriente de la fundación Iginio Giordanni. ¿Porqué Permitimos que se pudieran hacer donaciones mediante transferencia directa? Para aumentar la eficiencia de la donación evitando el pago de la comisión de la plataforma de pagos con tarjeta. Hemos recibido donaciones por transferencia de CronoChip, Fum de Llum y de la Urbanización La Torre de Porta Coeli.' 
-					legal='Los contratos legales de la entrega de los items han sido gestionados integramente por Tornem a Casa, mientras que la parte de certificados de donación y la gestión de la parte tributaria ha sido gestionada por la fundación Iginio Giordanni.' 
-					damnified='La gestión de los datos de los damnificados ha sido gestionado integramente por Tornem a Casa, Solo se ha cedido la información de dirección de entrega, nombre y contacto a Pascual Martí para la entrega de los Items que han entregado.' 
-					goods='La gestión de compras ha sido también gestionada por Tornem a Casa, la busqueda de proveedores, la obtención de los presupuestos y facturas proforma. La fundación Iginio Giordanni ha sido la encargada de realizar la transferencia de los fondos a los proveedores.' 
-					deliveries='Las entregas se han realizado de forma presencial, en la dirección de los damnificados, por parte de Tornem a Casa hemos sido los encargados de entregar Colchones y Radiadores. Mientras que nuestro proveedor ha Pascual Martí se ha encargado de la entrega de los más pesados como son las Lavadoras.'
+					title="Dinámica de Trabajo" 
+					description="Nuestra dinámica de trabajo ha estado partida en la gestión de los siguientes puntos: Donaciones, Parte legal y tributaria, Damnificados, Compras y Entregas." 
+					donations="Las donaciones las recibíamos a través de la plataforma de crowdfunding seguro (Paypal o Stripe), o en caso de donaciones de alto importe mediante transferencia bancaria. Todas las donaciones tenían como destinatario la cuenta corriente de la fundación Iginio Giordanni. ¿Por qué permitimos que se pudieran hacer donaciones mediante transferencia directa? Para aumentar la eficiencia de la donación evitando el pago de la comisión de la plataforma de pagos con tarjeta. Hemos recibido donaciones por transferencia de CronoChip, Fum de Llum y de la Urbanización La Torre de Porta Coeli." 
+					legal="Los contratos legales de la entrega de los ítems a los damnificados han sido realizados íntegramente por Tornem a Casa, mientras que la parte de certificados de donación y la gestión de la parte tributaria ha sido gestionada por la fundación Iginio Giordanni." 
+					damnified="La gestión de los datos de los damnificados ha sido gestionada íntegramente por Tornem a Casa." 
+					goods="La gestión de compras ha sido también gestionada por Tornem a Casa, la búsqueda de proveedores, la obtención de los presupuestos y facturas proforma. La fundación Iginio Giordanni ha sido la encargada de realizar la transferencia de los fondos a los proveedores." 
+					deliveries="Las entregas se han realizado de forma presencial, en la dirección de los damnificados. Por parte de Tornem a Casa, hemos sido los encargados de entregar colchones y radiadores, mientras que nuestro proveedor Pascual Martí se ha encargado de la entrega de los más pesados, como son las lavadoras."
+					class="mb-8 bg-gray-50 p-6 rounded-lg shadow-md"
 				/>
-				<CampaignUI />
-				<SuccessUI title="Logros"/>
-				<PartnersUI />
+
+				<!-- Campañas -->
+				<CampaignUI class="mb-8" />
+
+				<!-- Logros -->
+				<SuccessUI title="Logros" class="mb-8" />
+
+				<!-- Partners -->
+				<PartnersUI class="mb-8" />
 			</section>
 		</section>
 	</main>
-
 </div>
